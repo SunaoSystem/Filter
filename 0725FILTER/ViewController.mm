@@ -59,7 +59,7 @@
     
     NSLog(@"viewDidLoad");
     
-    UIImage* inputImage = [UIImage imageNamed:@"sunaosystem.jpg"];
+    UIImage* inputImage = [UIImage imageNamed:@"takimaki.jpg"];
     aiAburaeFilter = [[AIAburaeFilter alloc]init];
     aiKnitFilter = [[AIKnitFilter alloc] init];
     aiSewingFilter = [[AISewingFilter alloc] init];
