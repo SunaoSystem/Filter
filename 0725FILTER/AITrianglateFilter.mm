@@ -44,7 +44,7 @@
     GPUImagePicture *sourcePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
     
     GPUImageBoxBlurFilter *ssBlurFilter = [[GPUImageBoxBlurFilter alloc] init];
-    [ssBlurFilter setBlurRadiusInPixels:2];
+    [ssBlurFilter setBlurRadiusInPixels:1];
     
     GPUImagePixellateFilter *ssMosaicFilter = [[GPUImagePixellateFilter alloc] init];
     //[ssMosaicFilter setFractionalWidthOfAPixel:0.005];
@@ -65,7 +65,7 @@
 
 - (UIImage*)pyrSegFilter:(UIImage*)sourceImage{
     
-    int level = 5;
+    int level = 3;
     double threshold1,threshold2;
     IplImage *ipl_source, *ipl_adjustSize, *ipl_edit, *ipl_resize;
     CvMemStorage *storage=0;
@@ -260,7 +260,7 @@
             }
             else if(dst_img.at<unsigned char>( y,x ) > 128){
                 count++;
-                if(count > 30){
+                if(count > 200){
                     points.push_back(cv::Point2f(x,y));
                     count = 0;
                 }

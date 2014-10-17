@@ -30,6 +30,7 @@
 		34953E5B19E770BF001DCE91 /* portrait.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34953E5A19E770BF001DCE91 /* portrait.jpg */; };
 		34953E6119E77160001DCE91 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34953E6019E77160001DCE91 /* UIImage+ColorAtPixel.m */; };
 		34953E6319E7A06A001DCE91 /* chocolat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 34953E6219E7A06A001DCE91 /* chocolat.jpeg */; };
+		34B071A819F0B79C008917E4 /* blackberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34B071A719F0B79C008917E4 /* blackberry.jpg */; };
 		34B75E7119BC6D740003DB65 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B75E7019BC6D740003DB65 /* opencv2.framework */; };
 		34DE034119E27FC100205605 /* AITrianglateFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 34DE034019E27FC100205605 /* AITrianglateFilter.mm */; };
 		34E9237A1982635700C17679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E923791982635700C17679 /* Foundation.framework */; };
@@ -102,6 +103,7 @@
 		34953E5F19E77160001DCE91 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
 		34953E6019E77160001DCE91 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
 		34953E6219E7A06A001DCE91 /* chocolat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chocolat.jpeg; sourceTree = SOURCE_ROOT; };
+		34B071A719F0B79C008917E4 /* blackberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackberry.jpg; sourceTree = SOURCE_ROOT; };
 		34B75E7019BC6D740003DB65 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
 		34DE033F19E27FC100205605 /* AITrianglateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITrianglateFilter.h; sourceTree = "<group>"; };
 		34DE034019E27FC100205605 /* AITrianglateFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AITrianglateFilter.mm; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		34953E4619E76F13001DCE91 /* source_img */ = {
 			isa = PBXGroup;
 			children = (
+				34B071A719F0B79C008917E4 /* blackberry.jpg */,
 				3477B6F319E7CC8800A2FE14 /* product.jpg */,
 				3477B6EC19E7C9B200A2FE14 /* tetsuka.jpg */,
 				34953E6219E7A06A001DCE91 /* chocolat.jpeg */,
@@ -409,6 +412,7 @@
 				3477B6F419E7CC8800A2FE14 /* product.jpg in Resources */,
 				34953E5319E76F39001DCE91 /* taniai.jpg in Resources */,
 				34953E6319E7A06A001DCE91 /* chocolat.jpeg in Resources */,
+				34B071A819F0B79C008917E4 /* blackberry.jpg in Resources */,
 				34953E5419E76F39001DCE91 /* YP.jpg in Resources */,
 				3477B6ED19E7C9B200A2FE14 /* tetsuka.jpg in Resources */,
 			);
