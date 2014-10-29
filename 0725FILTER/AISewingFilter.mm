@@ -293,7 +293,7 @@
     [txBlurFilter setBlurRadiusInPixels:0];
     //明るさフィルタ
     GPUImageBrightnessFilter* txBrightnessFilter = [[GPUImageBrightnessFilter alloc] init];
-    [txBrightnessFilter setBrightness:0.2];
+    [txBrightnessFilter setBrightness:0.0];
     //拡大フィルタ
     GPUImageTransformFilter *txTranceFilter = [[GPUImageTransformFilter alloc] init];
     

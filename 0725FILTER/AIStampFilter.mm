@@ -108,9 +108,9 @@
     GPUImagePicture *imagePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
     
     GPUImageBrightnessFilter *brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
-    [brightnessFilter setBrightness:0.3];
+    [brightnessFilter setBrightness:0.1];
     GPUImageContrastFilter *contrastFilter = [[GPUImageContrastFilter alloc]init];
-    [contrastFilter setContrast:1.5];
+    [contrastFilter setContrast:1.8];
     GPUImageUnsharpMaskFilter *blurFilter = [[GPUImageUnsharpMaskFilter alloc] init];
     [blurFilter setBlurRadiusInPixels:2.0];
     [blurFilter setIntensity:0.1];

@@ -260,7 +260,7 @@
             }
             else if(dst_img.at<unsigned char>( y,x ) > 128){
                 count++;
-                if(count > 200){
+                if(count > 50){
                     points.push_back(cv::Point2f(x,y));
                     count = 0;
                 }

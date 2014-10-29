@@ -58,7 +58,7 @@
     [ssBlurFilter setBlurRadiusInPixels:4.0];
     
     GPUImagePixellateFilter *ssMosaicFilter = [[GPUImagePixellateFilter alloc] init];
-    [ssMosaicFilter setFractionalWidthOfAPixel:0.01];
+    [ssMosaicFilter setFractionalWidthOfAPixel:0.013];
     //[ssMosaicFilter setFractionalWidthOfAPixel:0.02];
     //[ssMosaicFilter setFractionalWidthOfAPixel:0.00];
     
@@ -200,7 +200,7 @@
     [ssContrastFilter setContrast:1.8];
     
     GPUImageBrightnessFilter *ssBrightnessFilter = [[GPUImageBrightnessFilter alloc] init];
-    [ssBrightnessFilter setBrightness:0.2];
+    [ssBrightnessFilter setBrightness:0.1];
     
     GPUImageSaturationFilter *ssSaturationFilter = [[GPUImageSaturationFilter alloc] init];
     [ssSaturationFilter setSaturation:1.8];
@@ -277,7 +277,7 @@
  GPUImagePicture *imagePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
  
  GPUImageBoxBlurFilter* ssBlurFilter = [[GPUImageBoxBlurFilter alloc] init];
- [ssBlurFilter setBlurRadiusInPixels:3];
+ [ssBlurFilter setBlurRadiusInPixels:1];
  GPUImageContrastFilter* ssContrastFilter = [[GPUImageContrastFilter alloc] init];
  [ssContrastFilter setContrast:1.0];
  
@@ -298,7 +298,7 @@
  [txBlurFilter setBlurRadiusInPixels:0];
  //コントラストフィルター
  GPUImageContrastFilter* txContrastFilter = [[GPUImageContrastFilter alloc] init];
- [txContrastFilter setContrast:1.1];
+ [txContrastFilter setContrast:1.0];
  //明るさフィルタ
  GPUImageBrightnessFilter* txBrightnessFilter = [[GPUImageBrightnessFilter alloc] init];
  [txBrightnessFilter setBrightness:0.0];

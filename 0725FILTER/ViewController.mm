@@ -12,6 +12,7 @@
 #import "AISewingFIlter.h"
 #import "AIStampFilter.h"
 #import "AITrianglateFilter.h"
+#import "AIYoshikawaFilter.h"
 #import "GPUImage.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
@@ -45,6 +46,7 @@
     AISewingFilter* aiSewingFilter;
     AIStampFilter* aiStampFilter;
     AITrianglateFilter * aiTrianglateFilter;
+    AIYoshikawaFilter * aiYoshikawaFilter;
     
 }
 
@@ -59,19 +61,24 @@
     
     NSLog(@"viewDidLoad");
     
-    UIImage* inputImage = [UIImage imageNamed:@"takimaki.jpg"];
+    UIImage* inputImage = [UIImage imageNamed:@"yskw_test_photo.jpg"];
+    UIImage* outputImage;
     aiAburaeFilter = [[AIAburaeFilter alloc]init];
     aiKnitFilter = [[AIKnitFilter alloc] init];
     aiSewingFilter = [[AISewingFilter alloc] init];
     aiStampFilter = [[AIStampFilter alloc] init];
     aiTrianglateFilter = [[AITrianglateFilter alloc]init];
+    aiYoshikawaFilter = [[AIYoshikawaFilter alloc] init];
     
     
-    //self.imageView.image = [aiAburaeFilter pass:inputImage];
-    //self.imageView.image = [aiKnitFilter pass:inputImage];
-    //self.imageView.image = [aiSewingFilter pass:inputImage];
-    //self.imageView.image = [aiStampFilter pass:inputImage];
-    self.imageView.image = [aiTrianglateFilter pass:inputImage];
+    //outputImage = [aiAburaeFilter pass:inputImage];
+    //outputImage = [aiKnitFilter pass:inputImage];
+    //outputImage = [aiSewingFilter pass:inputImage];
+    //outputImage = [aiStampFilter pass:inputImage];
+    //outputImage = [aiTrianglateFilter pass:inputImage];
+    outputImage = [aiYoshikawaFilter pass:inputImage];
+    
+    self.imageView.image = outputImage;
     
 }
 
