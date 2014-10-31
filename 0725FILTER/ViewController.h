@@ -17,5 +17,6 @@
 //Filter 01 明るさ調節用スライダー
 
 //明るさの数値を表示するラベル
+- (IBAction)startFilter:(id)sender;
 
 @end

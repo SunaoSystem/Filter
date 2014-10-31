@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3421251B1A00EB68003CCF1B /* yskwtonecirve.acv in Resources */ = {isa = PBXBuildFile; fileRef = 342125161A00E3A0003CCF1B /* yskwtonecirve.acv */; };
 		3430AAD019F1091900ED960A /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3430AACF19F1091900ED960A /* car.jpg */; };
 		346CB8A11982670300621AB9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346CB8A01982670300621AB9 /* CoreMedia.framework */; };
 		346CB8A31982671100621AB9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346CB8A21982671100621AB9 /* CoreVideo.framework */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		342125161A00E3A0003CCF1B /* yskwtonecirve.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = yskwtonecirve.acv; sourceTree = "<group>"; };
 		3430AACF19F1091900ED960A /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = SOURCE_ROOT; };
 		346CB8961982654300621AB9 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		346CB8A01982670300621AB9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -306,6 +308,7 @@
 				34E923821982635700C17679 /* InfoPlist.strings */,
 				34E923851982635700C17679 /* main.m */,
 				34E923871982635700C17679 /* 0725FILTER-Prefix.pch */,
+				342125161A00E3A0003CCF1B /* yskwtonecirve.acv */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				34953E5419E76F39001DCE91 /* YP.jpg in Resources */,
 				346E69FA1A00B0C200ACB8FF /* yskw_test_photo.jpg in Resources */,
 				3477B6ED19E7C9B200A2FE14 /* tetsuka.jpg in Resources */,
+				3421251B1A00EB68003CCF1B /* yskwtonecirve.acv in Resources */,
 				348FB19D19F54B190073F05E /* test_girl.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

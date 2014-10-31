@@ -59,6 +59,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    
+}
+
+- (IBAction)startFilter:(id)sender {
+    
+    [self runFilter];
+    
+}
+
+- (void)runFilter{
+    
     NSLog(@"viewDidLoad");
     
     UIImage* inputImage = [UIImage imageNamed:@"yskw_test_photo.jpg"];
@@ -75,19 +93,11 @@
     //outputImage = [aiKnitFilter pass:inputImage];
     //outputImage = [aiSewingFilter pass:inputImage];
     //outputImage = [aiStampFilter pass:inputImage];
-    //outputImage = [aiTrianglateFilter pass:inputImage];
-    outputImage = [aiYoshikawaFilter pass:inputImage];
+    outputImage = [aiTrianglateFilter pass:inputImage];
+    //outputImage = [aiYoshikawaFilter pass:inputImage];
     
     self.imageView.image = outputImage;
     
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-}
-
 @end
 

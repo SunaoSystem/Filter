@@ -65,7 +65,7 @@
 
 - (UIImage*)pyrSegFilter:(UIImage*)sourceImage{
     
-    int level = 3;
+    int level = 4;
     double threshold1,threshold2;
     IplImage *ipl_source, *ipl_adjustSize, *ipl_edit, *ipl_resize;
     CvMemStorage *storage=0;
@@ -260,7 +260,7 @@
             }
             else if(dst_img.at<unsigned char>( y,x ) > 128){
                 count++;
-                if(count > 50){
+                if(count > 30){
                     points.push_back(cv::Point2f(x,y));
                     count = 0;
                 }
@@ -286,10 +286,10 @@
     UIGraphicsBeginImageContext(size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
-    CGRect rect = CGRectMake(0,0,dst_img.cols,dst_img.rows);
-    CGContextAddRect(context,rect);
-    CGContextFillPath(context);
+    //CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
+    //CGRect rect = CGRectMake(0,0,dst_img.cols,dst_img.rows);
+    //CGContextAddRect(context,rect);
+    //CGContextFillPath(context);
     
     
     // 描画
@@ -343,16 +343,15 @@
         CGContextAddLineToPoint(context,p2_x,p2_y);
         CGContextAddLineToPoint(context,p3_x,p3_y);
         CGContextStrokePath(context);
-        CGContextClosePath(context);
+        //CGContextClosePath(context);
 
-        
         CGContextBeginPath(context);
         CGContextSetRGBFillColor(context, red_float, green_float, blue_float, 1.0);
         CGContextMoveToPoint(context,p1_x,p1_y);
         CGContextAddLineToPoint(context,p2_x,p2_y);
         CGContextAddLineToPoint(context,p3_x,p3_y);
         CGContextFillPath(context);
-        CGContextClosePath(context);
+        //CGContextClosePath(context);
         
 
         
@@ -364,8 +363,8 @@
         cv::line(img, p3, p1, cv::Scalar(0,255,0));
         */
         
-        NSLog(@"R=%d G=%d B=%d", red, green, blue);
-        NSLog(@"center_y=%d center_x=%d",center_y, center_x);
+        //NSLog(@"R=%d G=%d B=%d", red, green, blue);
+        //NSLog(@"center_y=%d center_x=%d",center_y, center_x);
         
     }
     

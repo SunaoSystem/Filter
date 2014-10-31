@@ -55,10 +55,10 @@
     GPUImagePicture *sourcePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
     
     GPUImageBoxBlurFilter *ssBlurFilter = [[GPUImageBoxBlurFilter alloc] init];
-    [ssBlurFilter setBlurRadiusInPixels:4.0];
+    [ssBlurFilter setBlurRadiusInPixels:6.0];
     
     GPUImagePixellateFilter *ssMosaicFilter = [[GPUImagePixellateFilter alloc] init];
-    [ssMosaicFilter setFractionalWidthOfAPixel:0.013];
+    [ssMosaicFilter setFractionalWidthOfAPixel:0.008];
     //[ssMosaicFilter setFractionalWidthOfAPixel:0.02];
     //[ssMosaicFilter setFractionalWidthOfAPixel:0.00];
     
@@ -76,7 +76,7 @@
 
 - (UIImage*)pyrSegFilter:(UIImage*)sourceImage{
     
-    int level = 3;
+    int level = 4;
     double threshold1,threshold2;
     IplImage *ipl_source, *ipl_adjustSize, *ipl_edit, *ipl_resize;
     CvMemStorage *storage=0;
@@ -277,7 +277,7 @@
  GPUImagePicture *imagePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
  
  GPUImageBoxBlurFilter* ssBlurFilter = [[GPUImageBoxBlurFilter alloc] init];
- [ssBlurFilter setBlurRadiusInPixels:1];
+ [ssBlurFilter setBlurRadiusInPixels:3];
  GPUImageContrastFilter* ssContrastFilter = [[GPUImageContrastFilter alloc] init];
  [ssContrastFilter setContrast:1.0];
  
@@ -306,7 +306,7 @@
  GPUImageTransformFilter *txTranceFilter = [[GPUImageTransformFilter alloc] init];
  
  CGAffineTransform txExpantion;
- txExpantion = CGAffineTransformMakeScale(1.8, 1.8);
+ txExpantion = CGAffineTransformMakeScale(1.4, 1.4);
  [txTranceFilter setAffineTransform:txExpantion];
  
  [imagePicture addTarget:txTranceFilter];
