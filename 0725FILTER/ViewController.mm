@@ -93,8 +93,8 @@
     //outputImage = [aiKnitFilter pass:inputImage];
     //outputImage = [aiSewingFilter pass:inputImage];
     //outputImage = [aiStampFilter pass:inputImage];
-    outputImage = [aiTrianglateFilter pass:inputImage];
-    //outputImage = [aiYoshikawaFilter pass:inputImage];
+    //outputImage = [aiTrianglateFilter pass:inputImage];
+    outputImage = [aiYoshikawaFilter pass:inputImage];
     
     self.imageView.image = outputImage;
     

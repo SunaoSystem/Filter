@@ -83,9 +83,12 @@
      
     */
     
-    [blurFilter setBlurRadiusInPixels:99];
+    [blurFilter setBlurRadiusInPixels:80.0];
     [saturationCutFilter setSaturation:0];
-    [saturationFilter setSaturation:0.75];
+    [saturationFilter setSaturation:0.85];
+    [brightnessFilter setBrightness:0.075];
+    [contrastFilter setContrast:1.00];
+    
     
     //---
     
@@ -101,8 +104,11 @@
     [saturationCutFilter addTarget:opacityFilter];//彩度
     [blurPicture processImage];
     
-    [opacityFilter useNextFrameForImageCapture];
-    UIImage* blurImage = [opacityFilter imageFromCurrentFramebuffer];
+    /*[opacityFilter useNextFrameForImageCapture];
+    UIImage* blurImage = [opacityFilter imageFromCurrentFramebuffer];*/
+    
+    [saturationCutFilter useNextFrameForImageCapture];
+     UIImage* blurImage = [saturationCutFilter imageFromCurrentFramebuffer];
 
     //ぼかしイメージとsourceImageをブレンド
     
@@ -117,6 +123,7 @@
     UIImage* blendImage = [blendFilter imageFromCurrentFramebufferWithOrientation:blurImage.imageOrientation];
     
     GPUImagePicture *blendPicture = [[GPUImagePicture alloc] initWithImage:blendImage];
+    
     
     [blendPicture addTarget:toneCurveFilter];//トーンカーブ
     [toneCurveFilter addTarget:saturationFilter];//彩度
@@ -138,8 +145,16 @@
     UIImage* outputImage = [hueFilter imageFromCurrentFramebuffer];
     
     //UIImage* outputImage = blendImage;
+     
     
-    return outputImage;
+    /*
+    [blendPicture addTarget:toneCurveFilter];
+    [blendPicture processImage];
+    [contrastFilter useNextFrameForImageCapture];
+    UIImage *outputImage = [ imageFromCurrentFramebuffer];
+    */
+    
+    return blendImage;
 }
 
 @end

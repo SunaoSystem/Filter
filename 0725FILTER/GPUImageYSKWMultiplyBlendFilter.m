@@ -16,7 +16,7 @@ NSString *const kGPUImageYSKWMultiplyBlendFragmentShaderString = SHADER_STRING
  void main()
  {
      vec4 base = texture2D(inputImageTexture, textureCoordinate);
-	 vec4 overlayer = vec4(overlayR, overlayG, overlayB, 0.7);
+	 vec4 overlayer = vec4(overlayR, overlayG, overlayB, 1.0);
      
 	 // multiply overlay
      gl_FragColor = overlayer * base + overlayer * (1.0 - base.a) + base * (1.0 - overlayer.a);
@@ -37,7 +37,7 @@ NSString *const kGPUImageYSKWMultiplyBlendFragmentShaderString = SHADER_STRING
     uniformG = [filterProgram uniformIndex:@"overlayG"];
     uniformB = [filterProgram uniformIndex:@"overlayB"];
 	
-    self.hue = 0.0;
+    self.hue = 0.14;
 	
     return self;
 }

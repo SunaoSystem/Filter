@@ -38,6 +38,9 @@
 		34953E6319E7A06A001DCE91 /* chocolat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 34953E6219E7A06A001DCE91 /* chocolat.jpeg */; };
 		34B071A819F0B79C008917E4 /* blackberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34B071A719F0B79C008917E4 /* blackberry.jpg */; };
 		34B75E7119BC6D740003DB65 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B75E7019BC6D740003DB65 /* opencv2.framework */; };
+		34B9E68D1A060F29003AC83E /* sample01 in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E68A1A060F29003AC83E /* sample01 */; };
+		34B9E68E1A060F29003AC83E /* sample02.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E68B1A060F29003AC83E /* sample02.png */; };
+		34B9E68F1A060F29003AC83E /* sample03.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E68C1A060F29003AC83E /* sample03.png */; };
 		34DE034119E27FC100205605 /* AITrianglateFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 34DE034019E27FC100205605 /* AITrianglateFilter.mm */; };
 		34E9237A1982635700C17679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E923791982635700C17679 /* Foundation.framework */; };
 		34E9237C1982635700C17679 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E9237B1982635700C17679 /* CoreGraphics.framework */; };
@@ -119,6 +122,9 @@
 		34953E6219E7A06A001DCE91 /* chocolat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chocolat.jpeg; sourceTree = SOURCE_ROOT; };
 		34B071A719F0B79C008917E4 /* blackberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackberry.jpg; sourceTree = SOURCE_ROOT; };
 		34B75E7019BC6D740003DB65 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
+		34B9E68A1A060F29003AC83E /* sample01 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample01; sourceTree = "<group>"; };
+		34B9E68B1A060F29003AC83E /* sample02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample02.png; sourceTree = "<group>"; };
+		34B9E68C1A060F29003AC83E /* sample03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample03.png; sourceTree = "<group>"; };
 		34DE033F19E27FC100205605 /* AITrianglateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITrianglateFilter.h; sourceTree = "<group>"; };
 		34DE034019E27FC100205605 /* AITrianglateFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AITrianglateFilter.mm; sourceTree = "<group>"; };
 		34E923761982635700C17679 /* 0725FILTER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0725FILTER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +222,7 @@
 		34953E4619E76F13001DCE91 /* source_img */ = {
 			isa = PBXGroup;
 			children = (
+				34B9E6891A060F29003AC83E /* yoshikawa_sample */,
 				346E69F91A00B0C200ACB8FF /* yskw_test_photo.jpg */,
 				348FB19C19F54B190073F05E /* test_girl.jpg */,
 				3430AACF19F1091900ED960A /* car.jpg */,
@@ -232,6 +239,16 @@
 			);
 			name = source_img;
 			sourceTree = "<group>";
+		};
+		34B9E6891A060F29003AC83E /* yoshikawa_sample */ = {
+			isa = PBXGroup;
+			children = (
+				34B9E68A1A060F29003AC83E /* sample01 */,
+				34B9E68B1A060F29003AC83E /* sample02.png */,
+				34B9E68C1A060F29003AC83E /* sample03.png */,
+			);
+			path = yoshikawa_sample;
+			sourceTree = SOURCE_ROOT;
 		};
 		34E9236D1982635700C17679 = {
 			isa = PBXGroup;
@@ -284,10 +301,10 @@
 				34E923911982635700C17679 /* ViewController.h */,
 				34E923921982635700C17679 /* ViewController.mm */,
 				34E923941982635700C17679 /* Images.xcassets */,
+				342125161A00E3A0003CCF1B /* yskwtonecirve.acv */,
 				34E923801982635700C17679 /* Supporting Files */,
 				34919A4619DA6EB2004A5D50 /* AIAburaeFilter.h */,
 				34919A4719DA6EB2004A5D50 /* AIAburaeFilter.mm */,
-				347D05C319DA906800B49BE3 /* AIKnitFIlter.h */,
 				347D05C419DA906800B49BE3 /* AIKnitFIlter.mm */,
 				347D05D319DB988D00B49BE3 /* AISewingFilter.h */,
 				347D05D419DB988D00B49BE3 /* AISewingFilter.mm */,
@@ -304,11 +321,11 @@
 		34E923801982635700C17679 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				347D05C319DA906800B49BE3 /* AIKnitFIlter.h */,
 				34E923811982635700C17679 /* 0725FILTER-Info.plist */,
 				34E923821982635700C17679 /* InfoPlist.strings */,
 				34E923851982635700C17679 /* main.m */,
 				34E923871982635700C17679 /* 0725FILTER-Prefix.pch */,
-				342125161A00E3A0003CCF1B /* yskwtonecirve.acv */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -431,9 +448,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34953E5019E76F39001DCE91 /* nonomura.jpg in Resources */,
+				34B9E68E1A060F29003AC83E /* sample02.png in Resources */,
 				34953E5819E76F46001DCE91 /* wool-white.jpg in Resources */,
 				34953E5119E76F39001DCE91 /* sunaosystem.jpg in Resources */,
 				34953E5219E76F39001DCE91 /* takimaki.jpg in Resources */,
+				34B9E68F1A060F29003AC83E /* sample03.png in Resources */,
+				34B9E68D1A060F29003AC83E /* sample01 in Resources */,
 				3430AAD019F1091900ED960A /* car.jpg in Resources */,
 				34E923901982635700C17679 /* Main_iPad.storyboard in Resources */,
 				34E923951982635700C17679 /* Images.xcassets in Resources */,
