@@ -25,22 +25,6 @@
 
 @interface ViewController (){
     
-   // UIImage *inputImage;
-    /*UIImage *outputImage;
-    UIImage *txtImage;
-    
-    UIImage *sisyuFirstOutputImage;
-    
-    UIImage *basicImage;
-    UIImage *firstImage;
-    UIImage *secondImage;
-    UIImage *blendImage;
-    
-    UIImage *thirdImage;
-    UIImage *textureImage;
-    
-    UIImage *forthImage;*/
-    
     AIAburaeFilter* aiAburaeFilter;
     AIKnitFilter* aiKnitFilter;
     AISewingFilter* aiSewingFilter;
@@ -79,9 +63,9 @@
     
     NSLog(@"viewDidLoad");
     
-    UIImage* inputImage = [UIImage imageNamed:@"yskw_test_photo.jpg"];
+    UIImage* inputImage = [UIImage imageNamed:@"YP.jpg"];
     UIImage* outputImage;
-    UIImage* sampleImage = [UIImage imageNamed:@"sample03.png"];
+    UIImage* sampleImage = [UIImage imageNamed:@"YP.jpg"];
     aiAburaeFilter = [[AIAburaeFilter alloc]init];
     aiKnitFilter = [[AIKnitFilter alloc] init];
     aiSewingFilter = [[AISewingFilter alloc] init];
