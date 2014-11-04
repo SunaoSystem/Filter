@@ -81,6 +81,7 @@
     
     UIImage* inputImage = [UIImage imageNamed:@"yskw_test_photo.jpg"];
     UIImage* outputImage;
+    UIImage* sampleImage = [UIImage imageNamed:@"sample03.png"];
     aiAburaeFilter = [[AIAburaeFilter alloc]init];
     aiKnitFilter = [[AIKnitFilter alloc] init];
     aiSewingFilter = [[AISewingFilter alloc] init];
@@ -97,6 +98,8 @@
     outputImage = [aiYoshikawaFilter pass:inputImage];
     
     self.imageView.image = outputImage;
+    
+    self.sampleImageView.image = sampleImage;
     
 }
 @end

@@ -40,7 +40,8 @@
 		34B75E7119BC6D740003DB65 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B75E7019BC6D740003DB65 /* opencv2.framework */; };
 		34B9E68D1A060F29003AC83E /* sample01 in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E68A1A060F29003AC83E /* sample01 */; };
 		34B9E68E1A060F29003AC83E /* sample02.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E68B1A060F29003AC83E /* sample02.png */; };
-		34B9E68F1A060F29003AC83E /* sample03.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E68C1A060F29003AC83E /* sample03.png */; };
+		34B9E6981A06611C003AC83E /* sample03.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E6971A06611C003AC83E /* sample03.png */; };
+		34B9E6A01A066EE6003AC83E /* Base-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B9E69F1A066EE6003AC83E /* Base-iPad.png */; };
 		34DE034119E27FC100205605 /* AITrianglateFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 34DE034019E27FC100205605 /* AITrianglateFilter.mm */; };
 		34E9237A1982635700C17679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E923791982635700C17679 /* Foundation.framework */; };
 		34E9237C1982635700C17679 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E9237B1982635700C17679 /* CoreGraphics.framework */; };
@@ -124,7 +125,8 @@
 		34B75E7019BC6D740003DB65 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
 		34B9E68A1A060F29003AC83E /* sample01 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample01; sourceTree = "<group>"; };
 		34B9E68B1A060F29003AC83E /* sample02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample02.png; sourceTree = "<group>"; };
-		34B9E68C1A060F29003AC83E /* sample03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample03.png; sourceTree = "<group>"; };
+		34B9E6971A06611C003AC83E /* sample03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample03.png; sourceTree = "<group>"; };
+		34B9E69F1A066EE6003AC83E /* Base-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Base-iPad.png"; sourceTree = "<group>"; };
 		34DE033F19E27FC100205605 /* AITrianglateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITrianglateFilter.h; sourceTree = "<group>"; };
 		34DE034019E27FC100205605 /* AITrianglateFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AITrianglateFilter.mm; sourceTree = "<group>"; };
 		34E923761982635700C17679 /* 0725FILTER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0725FILTER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,9 +245,10 @@
 		34B9E6891A060F29003AC83E /* yoshikawa_sample */ = {
 			isa = PBXGroup;
 			children = (
+				34B9E69F1A066EE6003AC83E /* Base-iPad.png */,
 				34B9E68A1A060F29003AC83E /* sample01 */,
 				34B9E68B1A060F29003AC83E /* sample02.png */,
-				34B9E68C1A060F29003AC83E /* sample03.png */,
+				34B9E6971A06611C003AC83E /* sample03.png */,
 			);
 			path = yoshikawa_sample;
 			sourceTree = SOURCE_ROOT;
@@ -452,7 +455,7 @@
 				34953E5819E76F46001DCE91 /* wool-white.jpg in Resources */,
 				34953E5119E76F39001DCE91 /* sunaosystem.jpg in Resources */,
 				34953E5219E76F39001DCE91 /* takimaki.jpg in Resources */,
-				34B9E68F1A060F29003AC83E /* sample03.png in Resources */,
+				34B9E6981A06611C003AC83E /* sample03.png in Resources */,
 				34B9E68D1A060F29003AC83E /* sample01 in Resources */,
 				3430AAD019F1091900ED960A /* car.jpg in Resources */,
 				34E923901982635700C17679 /* Main_iPad.storyboard in Resources */,
@@ -461,6 +464,7 @@
 				34E9238D1982635700C17679 /* Main_iPhone.storyboard in Resources */,
 				34953E5B19E770BF001DCE91 /* portrait.jpg in Resources */,
 				34E923841982635700C17679 /* InfoPlist.strings in Resources */,
+				34B9E6A01A066EE6003AC83E /* Base-iPad.png in Resources */,
 				3477B6F419E7CC8800A2FE14 /* product.jpg in Resources */,
 				34953E5319E76F39001DCE91 /* taniai.jpg in Resources */,
 				34953E6319E7A06A001DCE91 /* chocolat.jpeg in Resources */,

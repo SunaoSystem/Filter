@@ -23,12 +23,34 @@
 
 }
 
+- (UIImage *)resizedImage:(UIImage *)image width:(CGFloat)width height:(CGFloat)height
+{
+    if (UIGraphicsBeginImageContextWithOptions != NULL) {
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height), NO, [[UIScreen mainScreen] scale]);
+    } else {
+        UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    }
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    
+    [image drawInRect:CGRectMake(0.0, 0.0, width, height)];
+    
+    UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return resizedImage;
+}
+
+
 - (UIImage*)yoshikawaFilter:(UIImage*)sourceImage{
 
     GPUImagePicture *imagePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
     GPUImagePicture *blurPicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
     
     GPUImageGaussianBlurFilter *blurFilter = [GPUImageGaussianBlurFilter new];
+    GPUImageGaussianBlurFilter *blurFilter_02 = [GPUImageGaussianBlurFilter new];
     GPUImageColorInvertFilter *invertFilter = [GPUImageColorInvertFilter new];
     GPUImageSaturationFilter *saturationCutFilter = [GPUImageSaturationFilter new];
     GPUImageOpacityFilter *opacityFilter = [GPUImageOpacityFilter new];
@@ -40,6 +62,8 @@
     GPUImageHardLightBlendFilter *hardLightFilter = [GPUImageHardLightBlendFilter new];
     GPUImageBrightnessFilter *brightnessFilter = [GPUImageBrightnessFilter new];
     GPUImageContrastFilter *contrastFilter = [GPUImageContrastFilter new];
+    
+    GPUImageLinearBurnBlendFilter *linearBurnBlendFilter = [GPUImageLinearBurnBlendFilter new];
     
     GPUImagePicture *linearBlendBase;
     
@@ -83,11 +107,12 @@
      
     */
     
-    [blurFilter setBlurRadiusInPixels:80.0];
+    [blurFilter setBlurRadiusInPixels:70.0];
+    [blurFilter_02 setBlurRadiusInPixels:70.0];
     [saturationCutFilter setSaturation:0];
-    [saturationFilter setSaturation:0.85];
-    [brightnessFilter setBrightness:0.075];
-    [contrastFilter setContrast:1.00];
+    [saturationFilter setSaturation:0.8];
+    [brightnessFilter setBrightness:0.08];
+    [contrastFilter setContrast:1.11];
     
     
     //---
@@ -99,7 +124,8 @@
     //ぼかしイメージ作成
     
     [blurPicture addTarget:blurFilter];//ぼかし
-    [blurFilter addTarget:invertFilter];//階調の反転
+    [blurFilter addTarget:blurFilter_02];//ぼかし
+    [blurFilter_02 addTarget:invertFilter];//階調の反転
     [invertFilter addTarget:saturationCutFilter];//色相
     [saturationCutFilter addTarget:opacityFilter];//彩度
     [blurPicture processImage];
@@ -127,25 +153,37 @@
     
     [blendPicture addTarget:toneCurveFilter];//トーンカーブ
     [toneCurveFilter addTarget:saturationFilter];//彩度
-    [saturationFilter addTarget:hardLightFilter];//ハードライト(？)
-    
-    {
-        UIImage *blendBase = sourceImage;
-        linearBlendBase = [[GPUImagePicture alloc] initWithImage:blendBase smoothlyScaleOutput:YES];
-        [linearBlendBase processImage];
-        [linearBlendBase addTarget:hardLightFilter];
-    }
-    
-    [hardLightFilter addTarget:brightnessFilter];//明るさ
-    [brightnessFilter addTarget:contrastFilter];//コントラスト
-    [contrastFilter addTarget:hueFilter];//コントラスト
-    
+    //[saturationFilter addTarget:hardLightFilter];//ハードライト(？)
     [blendPicture processImage];
+    [saturationFilter useNextFrameForImageCapture];
+    UIImage* afterToneCurveImage = [saturationFilter imageFromCurrentFramebuffer];
+    
+    UIImage *blendBase = [UIImage imageNamed:@"Base-iPad.png"];
+    blendBase = [self resizedImage:blendBase width:sourceImage.size.width height:sourceImage.size.height];
+    
+    GPUImagePicture *afterToneCurvePicture = [[GPUImagePicture alloc] initWithImage:afterToneCurveImage];
+    GPUImagePicture *noisePicture = [[GPUImagePicture alloc] initWithImage:blendBase];
+    
+    [afterToneCurvePicture addTarget:hardLightFilter];
+    [afterToneCurvePicture processImage];
+    [noisePicture addTarget:hardLightFilter];
+    [noisePicture processImage];
+    
+    [hardLightFilter useNextFrameForImageCapture];
+    
+    UIImage* linearBlendImage = [hardLightFilter imageFromCurrentFramebufferWithOrientation:afterToneCurveImage.imageOrientation];
+    
+    GPUImagePicture *linearBlendPicture = [[GPUImagePicture alloc] initWithImage:linearBlendImage];
+    
+    [linearBlendPicture addTarget:brightnessFilter];//明るさ
+    [brightnessFilter addTarget:contrastFilter];//コントラスト
+    [contrastFilter addTarget:hueFilter];//カラーを乗算
+     
+    [linearBlendPicture processImage];
     [hueFilter useNextFrameForImageCapture];
     UIImage* outputImage = [hueFilter imageFromCurrentFramebuffer];
     
     //UIImage* outputImage = blendImage;
-     
     
     /*
     [blendPicture addTarget:toneCurveFilter];
@@ -154,7 +192,7 @@
     UIImage *outputImage = [ imageFromCurrentFramebuffer];
     */
     
-    return blendImage;
+    return outputImage;
 }
 
 @end

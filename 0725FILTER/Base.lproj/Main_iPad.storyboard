@@ -25,14 +25,18 @@
                                     <action selector="startFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JxY-Bp-XqA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZX-Fy-8BJ">
+                                <rect key="frame" x="0.0" y="510" width="768" height="514"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Eq-qA-ova">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1064"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="513"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="7Eq-qA-ova" id="zyX-hu-8v3"/>
+                        <outlet property="sampleImageView" destination="GZX-Fy-8BJ" id="nMt-lr-Z21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

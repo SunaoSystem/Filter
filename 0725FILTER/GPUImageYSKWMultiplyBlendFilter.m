@@ -50,7 +50,7 @@ NSString *const kGPUImageYSKWMultiplyBlendFragmentShaderString = SHADER_STRING
 {
     _hue = hue; // 0 ~ 1
 	
-	UIColor *overlay = [[UIColor alloc] initWithHue:hue saturation:0.23 brightness:1.0 alpha:1.0];
+	UIColor *overlay = [[UIColor alloc] initWithHue:hue saturation:0.04 brightness:1.0 alpha:1.0];
 	
 	CGFloat r, g, b, a;
     [overlay getRed:&r green:&g blue:&b alpha:&a];
