@@ -235,8 +235,7 @@
  [ssATFilter setTexelHeight:0.0004];
  [ssATFilter setTexelWidth:0.0000];
  GPUImageColorInvertFilter *ssInvertFilter = [[GPUImageColorInvertFilter alloc] init];
- GPUImageEmbossFilter *ssEmbossFilter = [[GPUImageEmbossFilter alloc] init];
- GPUImageUnsharpMaskFilter *ssBlurFilter = [[GPUImageUnsharpMaskFilter alloc] init];
+  GPUImageUnsharpMaskFilter *ssBlurFilter = [[GPUImageUnsharpMaskFilter alloc] init];
  [ssBlurFilter setBlurRadiusInPixels:2.8];
  [ssBlurFilter setIntensity:2.0];
  

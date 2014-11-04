@@ -63,10 +63,6 @@
     GPUImageBrightnessFilter *brightnessFilter = [GPUImageBrightnessFilter new];
     GPUImageContrastFilter *contrastFilter = [GPUImageContrastFilter new];
     
-    GPUImageLinearBurnBlendFilter *linearBurnBlendFilter = [GPUImageLinearBurnBlendFilter new];
-    
-    GPUImagePicture *linearBlendBase;
-    
     GPUImageYSKWMultiplyBlendFilter *hueFilter = [GPUImageYSKWMultiplyBlendFilter new];
     
     

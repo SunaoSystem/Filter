@@ -330,10 +330,6 @@
         
         [center_color getRed:&red_float green:&green_float blue:&blue_float alpha:&alpha_float];
         
-        uchar red = red_float*255;
-        uchar green = green_float*255;
-        uchar blue = blue_float*255;
-        
         //cv::fillConvexPoly(img, pt, 3, cv::Scalar(red,green,blue),8,0);
         
         CGContextBeginPath(context);

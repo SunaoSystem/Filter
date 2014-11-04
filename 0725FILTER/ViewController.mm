@@ -63,9 +63,9 @@
     
     NSLog(@"viewDidLoad");
     
-    UIImage* inputImage = [UIImage imageNamed:@"YP.jpg"];
+    UIImage* inputImage = [UIImage imageNamed:@"portrait.jpg"];
     UIImage* outputImage;
-    UIImage* sampleImage = [UIImage imageNamed:@"YP.jpg"];
+    UIImage* sampleImage = [UIImage imageNamed:@"portrait.jpg"];
     aiAburaeFilter = [[AIAburaeFilter alloc]init];
     aiKnitFilter = [[AIKnitFilter alloc] init];
     aiSewingFilter = [[AISewingFilter alloc] init];
