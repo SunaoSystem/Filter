@@ -16,6 +16,7 @@
 		34072EB31A08D90E00F5EC90 /* test_girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34072EAF1A08D90E00F5EC90 /* test_girl.jpg */; };
 		34072EB41A08D90E00F5EC90 /* YP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34072EB01A08D90E00F5EC90 /* YP.jpg */; };
 		3421251B1A00EB68003CCF1B /* yskwtonecirve.acv in Resources */ = {isa = PBXBuildFile; fileRef = 342125161A00E3A0003CCF1B /* yskwtonecirve.acv */; };
+		3464BB7D1A09E29400A38C67 /* wada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3464BB7C1A09E29400A38C67 /* wada.jpg */; };
 		346CB8A11982670300621AB9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346CB8A01982670300621AB9 /* CoreMedia.framework */; };
 		346CB8A31982671100621AB9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346CB8A21982671100621AB9 /* CoreVideo.framework */; };
 		346CB8A51982671C00621AB9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346CB8A41982671C00621AB9 /* OpenGLES.framework */; };
@@ -70,6 +71,7 @@
 		34072EAF1A08D90E00F5EC90 /* test_girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_girl.jpg; sourceTree = "<group>"; };
 		34072EB01A08D90E00F5EC90 /* YP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YP.jpg; sourceTree = "<group>"; };
 		342125161A00E3A0003CCF1B /* yskwtonecirve.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = yskwtonecirve.acv; sourceTree = "<group>"; };
+		3464BB7C1A09E29400A38C67 /* wada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wada.jpg; path = ../../../../wada.jpg; sourceTree = "<group>"; };
 		346CB8961982654300621AB9 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		346CB8A01982670300621AB9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		346CB8A21982671100621AB9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -168,6 +170,7 @@
 		34072EAC1A08D90E00F5EC90 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3464BB7C1A09E29400A38C67 /* wada.jpg */,
 				34072EAD1A08D90E00F5EC90 /* portrait.jpg */,
 				34072EAE1A08D90E00F5EC90 /* taniai.jpg */,
 				34072EAF1A08D90E00F5EC90 /* test_girl.jpg */,
@@ -348,6 +351,7 @@
 				34072EA01A08D5D000F5EC90 /* Base-iPad.png in Resources */,
 				34E923901982635700C17679 /* Main_iPad.storyboard in Resources */,
 				34E923951982635700C17679 /* Images.xcassets in Resources */,
+				3464BB7D1A09E29400A38C67 /* wada.jpg in Resources */,
 				34E923841982635700C17679 /* InfoPlist.strings in Resources */,
 				34072EB31A08D90E00F5EC90 /* test_girl.jpg in Resources */,
 				34072EA21A08D5D000F5EC90 /* wool-white.jpg in Resources */,

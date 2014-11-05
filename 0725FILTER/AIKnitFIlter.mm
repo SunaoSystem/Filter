@@ -59,8 +59,6 @@
     
     GPUImagePixellateFilter *ssMosaicFilter = [[GPUImagePixellateFilter alloc] init];
     [ssMosaicFilter setFractionalWidthOfAPixel:0.008];
-    //[ssMosaicFilter setFractionalWidthOfAPixel:0.02];
-    //[ssMosaicFilter setFractionalWidthOfAPixel:0.00];
     
     [sourcePicture addTarget:ssMosaicFilter];
     [ssMosaicFilter addTarget:ssBlurFilter];
@@ -188,13 +186,6 @@
 - (UIImage*)adjustmentFilter:(UIImage*)sourceImage{
     //イメージ
     GPUImagePicture *imagePicture = [[GPUImagePicture alloc] initWithImage:sourceImage];
-    
-    //モザイクフィルター
-    /*GPUImagePixellateFilter *ssMosaicFilter = [[GPUImagePixellateFilter alloc] init];
-     [ssMosaicFilter setFractionalWidthOfAPixel:0.003];*/
-    
-    /*GPUImagePolkaDotFilter *ssMosaicFilter = [[GPUImagePolkaDotFilter alloc] init];
-     [ssMosaicFilter setDotScaling:0.5];*/
     
     GPUImageContrastFilter *ssContrastFilter = [[GPUImageContrastFilter alloc] init];
     [ssContrastFilter setContrast:1.8];

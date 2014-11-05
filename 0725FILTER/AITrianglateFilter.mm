@@ -286,12 +286,6 @@
     UIGraphicsBeginImageContext(size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    //CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
-    //CGRect rect = CGRectMake(0,0,dst_img.cols,dst_img.rows);
-    //CGContextAddRect(context,rect);
-    //CGContextFillPath(context);
-    
-    
     // 描画
     for(auto it = triangles.begin(); it != triangles.end(); it++)
     {
@@ -348,19 +342,6 @@
         CGContextAddLineToPoint(context,p3_x,p3_y);
         CGContextFillPath(context);
         //CGContextClosePath(context);
-        
-
-        
-        //cv::circle(img, cv::Point(center_y,center_x), 2, cv::Scalar(0,0,200), 3, 4);
-        
-        /*
-        cv::line(img, p1, p2, cv::Scalar(0,255,0));
-        cv::line(img, p2, p3, cv::Scalar(0,255,0));
-        cv::line(img, p3, p1, cv::Scalar(0,255,0));
-        */
-        
-        //NSLog(@"R=%d G=%d B=%d", red, green, blue);
-        //NSLog(@"center_y=%d center_x=%d",center_y, center_x);
         
     }
     

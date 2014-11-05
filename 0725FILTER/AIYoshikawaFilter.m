@@ -179,15 +179,6 @@
     [hueFilter useNextFrameForImageCapture];
     UIImage* outputImage = [hueFilter imageFromCurrentFramebuffer];
     
-    //UIImage* outputImage = blendImage;
-    
-    /*
-    [blendPicture addTarget:toneCurveFilter];
-    [blendPicture processImage];
-    [contrastFilter useNextFrameForImageCapture];
-    UIImage *outputImage = [ imageFromCurrentFramebuffer];
-    */
-    
     return outputImage;
 }
 
